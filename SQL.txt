@@ -1,0 +1,5 @@
+
+CREATE TABLE user_info(id UInt64,user_name String,pass_word String,phone String,create_day Date) ENGINE = MergeTree PRIMARY KEY id ORDER BY id SETTINGS index_granularity = 8192;
+
+
+INSERT INTO user_info(id, user_name, pass_word, phone, create_day) VALUES(3, 'xiaohong','54321', '18500909875', '2022-02-06');

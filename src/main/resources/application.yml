@@ -1,0 +1,23 @@
+#项目启动的端口可修改
+server:
+  port: 8081
+
+  # mybatis 配置
+mybatis:
+  type-aliases-package: com.congge.entity
+  mapper-locations: classpath:/mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    click:
+      driverClassName: ru.yandex.clickhouse.ClickHouseDriver
+      url: jdbc:clickhouse://162.14.78.202:8123/default
+      username:
+      password: root
+      initialSize: 10
+      maxActive: 10000
+      minIdle: 10
+      maxWait: 60000
